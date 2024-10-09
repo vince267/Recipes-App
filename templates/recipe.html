@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}
+Recipe!
+{% endblock %}
+
+{% block main %}
+
+
+<h1> {{ name }}</h1>
+
+&nbsp;
+
+<h3><u>Ingredients</u></h3>
+<ul class="recipeul">
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient[0] }}: {{ ingredient[1] }} {{ ingredient[2] }}</li>
+    {% endfor %}
+</ul>
+<!-- {% for ingredient in ingredients %}
+<p> {{ ingredient[0] }}: {{ ingredient[1] }} {{ ingredient[2] }}</p>
+{% endfor %} -->
+
+&nbsp;
+
+<h3><u>Steps </u></h3>
+<ol class="recipeol">
+    {% for step in steps %}
+    <li>{{ step[0] }}</li>
+    {% endfor %}
+</ol>
+
+<!-- {% for step in steps %}
+<p>{{ step[0] }}</p>
+{% endfor %} -->
+
+&nbsp;
+
+
+<p><strong>Comments:</strong> {{ recipes[0] }}</p>
+<p><strong>Date created:</strong> {{ recipes[1] }}</p>
+
+
+{% endblock %}

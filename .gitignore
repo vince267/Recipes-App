@@ -1,0 +1,39 @@
+# Environment variables
+.env
+
+# Node.js
+node_modules/
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# Java/Gradle/Maven
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# IDEs
+.idea/
+.vscode/
+
+# Database files
+*.db

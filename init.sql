@@ -1,0 +1,21 @@
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, hash TEXT NOT NULL);
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE UNIQUE INDEX username ON users (username);
+CREATE TABLE recipes(
+id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+name TEXT NOT NULL,
+comments TEXT,
+userid INTEGER NOT NULL,
+datetime DATETIME NOT NULL,
+FOREIGN KEY(userid) REFERENCES users(id));
+CREATE TABLE ingredients(
+ingredient TEXT NOT NULL,
+amount NUMERIC NOT NULL,
+unit TEXT NOT NULL,
+recipeid INTEGER NOT NULL,
+FOREIGN KEY(recipeid) REFERENCES recipes(id));
+CREATE TABLE steps(
+steps TEXT NOT NULL,
+recipeid INTEGER NOT NULL,
+FOREIGN KEY(recipeid) REFERENCES recipes(id));
+CREATE UNIQUE INDEX id ON recipes (id);

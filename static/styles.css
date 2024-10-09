@@ -1,0 +1,49 @@
+.field{
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+	/* transition: opacity 0.3s; */
+}
+
+/* .field input{
+	padding: 5px 10px;
+	width: 100%;
+	border: none;
+	 border: thin solid #d4d4d4; 
+	font-size: 20px;
+	color: #888;
+	font-family: ubuntu, sans-serif;
+	background-color: #f9f9f9;
+} */
+/* .field input:focus{
+	outline: none;
+} */
+
+.field span{
+	display: inline-block;
+	/* margin-left: 10px;
+	cursor: pointer;
+	background-color: #f9f9f9;
+	padding: 10px;
+	font-size: 20px;
+	transition: all 0.3s;
+	font-weight: bold;
+	border: thin solid #d4d4d4;  */
+}
+.field span:last-child{
+	display: none;
+	/* padding: 12px; */
+}
+
+.recipeol{
+	display: table;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.recipeul{
+	display: table;
+	margin: 0 auto;
+	text-align: left;
+}

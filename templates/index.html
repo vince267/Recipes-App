@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <th>Recipe Name</th>
+        </thead>
+        {% for row in data %}
+        <tr>
+            <td> 
+                <form action="/recipe" method="POST">
+                    <input name="id" type="hidden" value="{{ row[1] }}" >
+                    <input class="btn btn-link" type="submit" name="name" value="{{ row[0] }}"> 
+                </form> 
+            </td>
+        </tr>
+        {% endfor %}
+   </table>
+   {% endblock %}

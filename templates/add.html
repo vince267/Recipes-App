@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add a Recipe!
+{% endblock %}
+
+{% block main %}
+    <!-- Much of the script for this code was motivated by the code at https://digitalfox-tutorials.com/tutorial.php?title=How-to-add-remove-input-fields-dynamically-using-javascript -->
+
+    <h1 class="head">
+        Add a recipe?
+    </h1><br>
+
+	<form action="/add" method="post" autocomplete="off">
+		<h3>Recipe Name</h3>
+        <div>
+            <input type="text" name="name" placeholder="Recipe Name" required>
+        </div>
+        &nbsp;
+
+
+        <h3>Ingredients</h3>
+        <div class="field">
+			<input type="text" name="ingredients[]" placeholder="Ingredient" required>
+			<input type="number" name="amounts[]" min="0" placeholder="Amount" required step=".01">
+			<input type="text" name="units[]" placeholder="Unit" required>
+			<span onclick="addIngredient(this)">+</span>
+            <span onclick="removeField(this)">-</span>
+		</div>
+
+
+		<h3 class="stepheader">Steps</h3>
+
+        <div class="field">
+			<input type="text" name="steps[]" placeholder="Step" required>
+			<span onclick="addStep(this)">+</span>
+            <span onclick="removeField(this)">-</span>
+		</div>
+
+
+        <h3 class="stepheader2">Comments and/or Links</h3>
+
+        <div>
+            <input type="text" name="comments" placeholder="Recipe Name">
+        </div>
+
+        <br>
+
+		<button class="btn btn-primary" type="submit" >Save Recipe</button>
+
+	</form>
+
+
+    <script src="static/script.js"></script>
+
+{% endblock %}
